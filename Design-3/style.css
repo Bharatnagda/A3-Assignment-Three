@@ -1,0 +1,131 @@
+:root {
+    --primary: #ffffff;
+    --secondary: #12B89E;
+}
+
+@font-face {
+    font-family: michroma;
+    src: url(./assets/Michroma-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    padding: 15px 20px;
+    font-family: michroma;
+    background-color: #000307;
+    color: var(--primary);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+main{
+    width: 100%;
+}
+
+.brand-logo {
+    display: block;
+    width: 25%;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    justify-content: space-between;
+}
+
+.navbar-item {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    color: var(--primary);
+    position: relative;
+}
+
+.navbar-item:hover {
+    text-shadow: 0 0 10px var(--secondary);
+    color: var(--secondary);
+}
+
+.navbar-item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 0;
+    transform: translate(-50%, -50%);
+    bottom: -10px;
+    height: 2px;
+    background-color: var(--secondary);
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-item:hover::after {
+    width: 100%;
+}
+
+.contact-us {
+    width: fit-content;
+    padding: 10px 25px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 18px;
+    color: var(--primary);
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    border-radius: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-us:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    filter: drop-shadow(0 0 10px var(--secondary));
+}
+.hero-section{
+    position: relative;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-image{
+    position: absolute;
+    right: 10%;
+    top: 0;
+    bottom: 0;
+    width: 45rem;
+    height: 35rem;
+}
+.hero-image img{
+    width: 100%;
+    height: 100%;
+}
+.left-hero{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
