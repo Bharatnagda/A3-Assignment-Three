@@ -417,7 +417,7 @@ main {
 }
 
 .single-project {
-    border: 2px solid var(--primary);
+    border: 2px solid rgba(255, 255, 255, 0.12);
     border-radius: 15px;
     display: flex;
     width: 30%;
@@ -503,7 +503,7 @@ main {
 .redirect-control:hover{
     transform: rotate(-45deg);
 }
-.share-icon{
+.share-icon, a{
     font-size: 24px;
     font-weight: 500;
     color: var(--primary);
@@ -512,4 +512,211 @@ main {
 }
 .share-icon i:hover{
     color: var(--secondary);
+}
+.how-we-work-title{
+    margin-top: 35px;
+    font-size: 34px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.how-we-work-title span {
+    color: var(--secondary);
+}
+.work-session{
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+    justify-content: space-between;
+    margin-block: 50px;
+}
+.single-work{
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    background: rgba(0, 3, 7, 0.65);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 14px 10px;
+    border-radius: 15px;
+    width: 16%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+
+}
+.single-work::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 100%;
+    transform: translate(0%,-50%);
+    width: 100%;
+    top: 30%;
+    border: 2px dashed var(--secondary);
+}
+.single-work:last-child::after{
+    display: none;
+}
+.work-icon i {
+    font-size: 24px;
+    border: 1px solid var(--primary);
+    padding: 10px 12px;
+    border-radius: 50%;
+    display: block;
+}
+.work-icon{
+    box-shadow: 0 0 5px 0 var(--primary);
+    border-radius: 50%;
+}
+.work-count{
+    font-size: 16px;
+    color: var(--secondary);
+    font-weight: 600;
+}
+.work-title{
+    font-size: 14px;
+    font-weight: 600;
+    margin-block: 5px;
+}
+.work-desc{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--primary);
+    opacity: 0.5;
+}
+footer{
+    padding: 40px 30px;
+    border-radius: 25px;
+    background-image: url(./assets/footer-svg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.brand-highlight{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+}
+.footer-title{
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color:var(--primary);
+}
+
+.footer-title span{
+    color: var(--secondary);
+}
+.footer-desc{
+    font-size: 14px;
+    color: var(--primary);
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+.contact-us-footer{
+    border-radius: 15px;
+    border-width: 1.5px;
+}
+.contact-section{
+    display: flex;
+    width: 60%;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 40%;
+    position: relative;
+}
+.footer-contact::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    right: 0;
+}
+.footer-contact-icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.contact-icon{
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--primary);
+    opacity: 0.6;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+.contact-icon:hover{
+    border: 1px solid var(--secondary);
+    box-shadow: 0 0 5px 0 var(--secondary);
+    color: var(--secondary);
+
+}
+.footer-address{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.footer-address-title{
+    font-size: 16px;
+    color: var(--primary);
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+.footer-address-icon{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+     opacity: 0.6;
+    transition: 0.3s ease-in-out;
+}
+.address-icon{
+    font-size: 18px;
+    
+}
+.address-title{
+   font-size: 12px;
+    font-weight: 500;   
+}
+.footer-address-icon:hover{
+    color: var(--secondary);
+    opacity: 1;
+} 
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.copyright-desc{
+    font-size: 12px;
+    color: var(--primary);
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+.copyright-field{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
 }

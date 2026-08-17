@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%" preserveAspectRatio="none">
+  <defs>
+    <!-- Background Base Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020d0c" />
+      <stop offset="50%" stop-color="#031614" />
+      <stop offset="100%" stop-color="#010808" />
+    </linearGradient>
+
+    <!-- Mountain Top Glow -->
+    <linearGradient id="peakGlow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#00f2b2" stop-opacity="0.35" />
+      <stop offset="40%" stop-color="#007a66" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Radial Cyan Light Beam -->
+    <radialGradient id="cyanRadial" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#00f2b2" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#008060" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Base Card Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" />
+
+  <!-- Ambient Light -->
+  <rect width="1200" height="400" fill="url(#cyanRadial)" />
+
+  <!-- Mountain Silhouette / Ridges -->
+  <path d="M 0,400 L 0,220 L 180,180 L 320,80 L 390,140 L 480,40 L 620,230 L 780,160 L 950,280 L 1200,210 L 1200,400 Z" fill="#010b0a" opacity="0.8" />
+
+  <!-- Glowing Peaks & Edges -->
+  <path d="M 0,220 L 180,180 L 320,80 L 390,140 L 480,40 L 620,230 L 780,160 L 950,280 L 1200,210 L 1200,260 L 950,320 L 780,200 L 620,270 L 480,90 L 390,180 L 320,130 L 180,220 L 0,260 Z" fill="url(#peakGlow)" />
+  
+  <!-- Crisp Highlight Stroke -->
+  <polyline points="0,220 180,180 320,80 390,140 480,40 620,230 780,160 950,280 1200,210" fill="none" stroke="#00f2b2" stroke-width="1.2" stroke-opacity="0.4" />
+</svg>
